@@ -7,24 +7,24 @@
     max-width: $breakpoint-xxl;
     margin: 0 auto;
 
-    // Media Query for small devices (up to 600px)
-    @media (min-width: $breakpoint-xs) {
-      padding: $spacing-sm; /* Reduced padding for very small screens */
-    }
-
     // Media Query for medium devices (up to 768px)
-    @media (min-width: $breakpoint-sm) {
-      padding: $spacing-md; /* Standard padding for small devices */
+    @media (max-width: $breakpoint-sm) {
+      padding: $spacing-sm; // Small padding for small screens
     }
 
-    // Media Query for large devices (up to 1024px)
-    @media (min-width: $breakpoint-md) {
-      padding: $spacing-lg; /* Increased padding for tablets */
+    // Media Query for medium to large devices (768px to 1024px)
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      padding: $spacing-md; // Medium padding for medium screens
     }
 
-    // Media Query for extra large devices (up to 1200px)
+    // Media Query for large devices (1024px to 1200px)
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      padding: $spacing-lg; // Large padding for larger screens
+    }
+
+    // Media Query for extra large devices (1200px and up)
     @media (min-width: $breakpoint-lg) {
-      padding: $spacing-xl; /* Larger padding for desktops */
+      padding: $spacing-xl; // Extra large padding for extra large screens
     }
 
     .back-button {
