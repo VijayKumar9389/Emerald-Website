@@ -1,0 +1,66 @@
+@import "../../../../styles/theme.scss";
+
+.skills-container {
+  width: 100%;
+  max-width: $breakpoint-xxl; // Using breakpoint variable for max-width
+  margin: 0 auto;
+}
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // Responsive grid
+  gap: $spacing-lg; // Using spacing variable for gap
+
+  @media screen and (max-width: $breakpoint-lg) {
+    display: flex;
+    overflow-x: auto;
+    gap: $spacing-md; // Using spacing variable for gap
+    padding: $spacing-md 0; // Adjusting padding for smaller screens
+  }
+}
+
+.skill-card {
+  background-color: $card-background; // Using card background color variable
+  border-radius: $border-radius-md; // Using border radius variable
+  min-width: 250px;
+  min-height: 300px;
+  border: 1px solid $border-color; // Using border color variable
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: $spacing-lg; // Using spacing variable for padding
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+
+  .skill-icon {
+    font-size: 2rem; // Increased icon size for better visibility
+    color: $text-white; // White icon color for contrast
+    transition: color 0.3s ease-in-out; // Smooth transition for icon color
+    background: linear-gradient(145deg, $primary-color, darken($primary-color, 15%)); // Gradient background for icon
+    padding: $spacing-md; // Increased padding for better spacing
+    border-radius: 50%; // Circular background for the icon
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); // Subtle inset shadow for depth
+  }
+
+  .skill-content {
+    .skill-title {
+      font-weight: $font-weight-bold; // Using font weight variable for bold title
+      color: $text-primary; // Dark color for the title
+      margin-bottom: $spacing-sm;
+    }
+
+    .skill-description {
+      color: $text-secondary; // Lighter color for description
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .skills-wrapper {
+    grid-template-columns: 1fr; // Single column on smaller screens
+  }
+}

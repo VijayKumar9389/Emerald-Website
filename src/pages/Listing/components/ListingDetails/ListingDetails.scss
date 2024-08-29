@@ -1,0 +1,34 @@
+@import '../../../../styles/theme.scss';
+
+.listing-detail-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  list-style: none;
+
+
+  .stat-card {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    background-color: $card-background;
+    border-radius: 50px ;
+    border: 1px solid $border-color;
+    padding: $spacing-sm $spacing-md;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    .stat-card__icon {
+      font-size: 24px;
+      color: $primary-color; // Icon color
+    }
+
+    .stat-card__label {
+      color: $text-secondary; // Secondary text color
+
+      strong {
+        color: $text-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../styles/theme.scss';
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+
+  .home-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    // Media Query for small devices (up to 600px)
+    @media (min-width: $breakpoint-xs) {
+      padding: $spacing-sm; /* Reduced padding for very small screens */
+    }
+
+    // Media Query for medium devices (up to 768px)
+    @media (min-width: $breakpoint-sm) {
+      padding: $spacing-md; /* Standard padding for small devices */
+    }
+
+    // Media Query for large devices (up to 1024px)
+    @media (min-width: $breakpoint-md) {
+      padding: $spacing-lg; /* Increased padding for tablets */
+    }
+
+    // Media Query for extra large devices (up to 1200px)
+    @media (min-width: $breakpoint-lg) {
+      padding: $spacing-xl; /* Larger padding for desktops */
+    }
+  }
+}

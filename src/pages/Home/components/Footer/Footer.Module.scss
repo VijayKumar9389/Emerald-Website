@@ -1,0 +1,66 @@
+@import "../../../../styles/theme.scss";
+
+.home-footer {
+  position: relative; /* Ensure positioning context for the shape divider */
+  background-color: $footer-background;
+  color: $text-white;
+  padding-bottom: $spacing-xl;
+
+  .custom-shape-divider-bottom-1724972817 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1724972817 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    background-color: $background-color;
+  }
+
+  .custom-shape-divider-bottom-1724972817 .shape-fill {
+    fill: #1e1e1e;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+
+      h3 {
+        margin-bottom: $spacing-md;
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin: 0;
+        a {
+          color: $link-color;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: lighten($link-color, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: $spacing-lg;
+    font-size: 0.875rem;
+  }
+}

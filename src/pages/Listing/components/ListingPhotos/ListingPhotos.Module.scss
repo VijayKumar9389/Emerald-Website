@@ -1,0 +1,30 @@
+@import '../../../../styles/theme.scss';
+
+.listing-photos {
+  display: flex;
+  gap: $spacing-md; // Increased spacing for a more modern layout
+  overflow-x: auto;
+  padding: $spacing-md $spacing-xs;
+  margin-bottom: $spacing-lg;
+  scroll-snap-type: x mandatory; // For smooth scrolling experience
+  -webkit-overflow-scrolling: touch; // Enable smooth scrolling on touch devices
+
+  .listing-photo {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: $border-radius-md; // Updated border radius for a modern look
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; // Added box-shadow transition
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: $shadow-small; // Added shadow on hover for a modern effect
+    }
+
+    &.selected {
+      border: 2px solid $primary-color;
+      box-shadow: 0 0 0 4px rgba($primary-color, 0.2); // Add subtle glow effect for selected state
+    }
+  }
+}

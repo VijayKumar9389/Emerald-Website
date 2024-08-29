@@ -1,0 +1,58 @@
+@import '../../../../styles/theme.scss';
+
+.listing-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-lg;
+  margin-top: $spacing-lg;
+
+  .section {
+    padding: $spacing-md;
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: $spacing-md; // Space between icon and heading
+      border-bottom: 1px solid $border-color;
+      margin-bottom: $spacing-md;
+      padding-bottom: $spacing-sm;
+
+      .section-icon {
+        font-size: 2rem; // Size of the icon
+        color: $text-primary; // Icon color
+      }
+
+      h4 {
+        font-weight: $font-weight-medium;
+        color: $text-primary;
+      }
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Responsive grid
+      gap: $spacing-md; // Spacing between grid items
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        position: relative;
+        padding: $spacing-sm $spacing-md;
+        color: $text-secondary;
+        display: flex;
+        align-items: center;
+        gap: $spacing-md; // Increased gap for better spacing
+        font-style: italic; // Ensure font style is normal for readability
+
+        &:before {
+          content: '→'; // Arrow character
+          font-size: 1.25rem; // Larger arrow for better visibility
+          color: $text-primary; // Consistent color with theme
+          margin-right: $spacing-sm; // Space between arrow and text
+        }
+      }
+    }
+  }
+}

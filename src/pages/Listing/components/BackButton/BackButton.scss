@@ -1,0 +1,32 @@
+@import '../../../../styles/theme.scss';
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%; /* Circular shape */
+  width: 50px; /* Fixed width for circular shape */
+  height: 50px; /* Fixed height for circular shape */
+  background-color: $secondary-color; /* Default background color */
+  color: $text-white; /* Default text color */
+  font-size: 1.25rem; /* Adjust size of the text/icon */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+
+  svg {
+    font-size: 1.5rem; /* Adjust size of the SVG icon */
+  }
+
+  &:hover {
+    background-color: $primary-color; /* Change to primary color on hover */
+    color: $text-white; /* Ensure text color remains consistent on hover */
+    transform: scale(1.1); /* Slight scale-up effect on hover */
+  }
+
+  &:active {
+    background-color: darken($primary-color, 15%); /* Darker shade on click */
+    transform: scale(0.95); /* Slight scale-down effect on click */
+  }
+}

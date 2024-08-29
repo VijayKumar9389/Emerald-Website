@@ -1,0 +1,89 @@
+@import "../../../../styles/theme.scss";
+
+/* Contact.Module.scss */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: $breakpoint-xxl;
+  margin: 0 auto;
+  padding: $spacing-lg;
+
+
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-image {
+      width: 100%;
+      height: auto;
+      max-width: 500px; // Adjust as needed
+      margin-bottom: $spacing-lg;
+    }
+
+    .contact-form {
+      width: 100%;
+      max-width: 600px;
+      background-color: $card-background;
+      border-radius: $border-radius-md;
+      box-shadow: $shadow-small;
+      padding: $spacing-lg;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-md;
+      position: relative;
+      z-index: 1; // Ensure form is above the image
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        color: $text-primary;
+        margin-bottom: $spacing-sm;
+
+        input, select, textarea {
+          margin-top: $spacing-sm;
+          padding: $spacing-md;
+          border-radius: $border-radius-sm;
+          border: 1px solid $border-color;
+          font-size: 1rem;
+          color: $text-primary;
+          background-color: $background-color;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+          &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+            outline: none;
+          }
+        }
+
+        textarea {
+          resize: vertical;
+          min-height: 120px;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: $breakpoint-sm) {
+  .contact-container {
+    padding: $spacing-md;
+  }
+
+  .contact-form {
+    padding: $spacing-md;
+  }
+}

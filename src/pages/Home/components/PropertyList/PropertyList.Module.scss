@@ -1,0 +1,67 @@
+@import "../../../../styles/theme.scss";
+
+.property-list-container {
+  width: 100%;
+  max-width: $breakpoint-xxl;
+  margin: 0 auto;
+  padding: $spacing-lg;
+}
+
+.property-list {
+  display: grid;
+  gap: $spacing-lg;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // More responsive grid
+}
+
+.property-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transitions
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .property-image {
+    position: relative;
+    height: 400px; // Reduced height for a balanced look
+    overflow: hidden;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-small;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translateX(-50%);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .property-details {
+    padding: $spacing-lg 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    .property-title {
+      color: $text-primary;
+      margin-bottom: $spacing-sm;
+    }
+
+    .property-price {
+      color: $primary-color;
+      margin-bottom: $spacing-sm;
+    }
+
+    .property-info {
+      color: $text-secondary;
+      margin-bottom: $spacing-lg;
+
+      span {
+        margin-right: $spacing-sm;
+      }
+    }
+  }
+}
