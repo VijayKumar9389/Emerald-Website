@@ -3,36 +3,37 @@
 .btn-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Align items to the end of the container */
+  justify-content: space-between; /* Space between button and logo */
   gap: $spacing-md; /* Space between the button and the logo */
+  margin-top: $spacing-lg;
 
   .back-button {
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: $border-radius-md; /* Rounded corners */
-    width: 50px; /* Fixed width */
-    height: 50px; /* Fixed height */
-    background-color: $secondary-color; /* Default background color */
-    color: $text-white; /* Default text color */
+    border-radius: $border-radius-lg; /* More pronounced rounding to match the main button */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%)); /* Gradient background */
+    color: $text-white; /* White text for contrast */
     font-size: 1.5rem; /* Adjust size of the text/icon */
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+
 
     .icon {
       font-size: 1.5rem; /* Adjust size of the SVG icon */
+      color: $text-white; /* Icon color to match the button */
     }
 
     &:hover {
-      background-color: $primary-color; /* Change to primary color on hover */
-      color: $text-white; /* Ensure text color remains consistent on hover */
+      background: linear-gradient(135deg, darken($primary-color, 10%), darken($primary-color, 20%)); /* Darker gradient on hover */
       transform: scale(1.05); /* Slight scale-up effect on hover */
     }
 
     &:active {
-      background-color: darken($primary-color, 15%); /* Darker shade on click */
+      background: linear-gradient(135deg, darken($primary-color, 20%), darken($primary-color, 30%)); /* Even darker gradient on click */
       transform: scale(0.95); /* Slight scale-down effect on click */
     }
   }

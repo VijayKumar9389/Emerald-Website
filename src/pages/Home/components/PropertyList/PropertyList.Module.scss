@@ -41,17 +41,16 @@
 
     .property-title {
       color: $text-primary;
-      margin-bottom: $spacing-sm;
+      font-weight: $font-weight-medium;
     }
 
     .property-price {
       color: $primary-color;
-      margin-bottom: $spacing-sm;
     }
 
     .property-info {
       color: $text-secondary;
-      margin-bottom: $spacing-lg;
+      margin: $spacing-md 0;
 
       span {
         margin-right: $spacing-sm;

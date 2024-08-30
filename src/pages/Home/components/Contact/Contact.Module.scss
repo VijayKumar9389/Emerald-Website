@@ -9,7 +9,6 @@
   max-width: $breakpoint-xxl;
   margin: 0 auto;
 
-
   .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,13 +25,11 @@
     .contact-image {
       width: 100%;
       height: auto;
-      max-width: 500px; // Adjust as needed
       margin-bottom: $spacing-lg;
     }
 
     .contact-form {
       width: 100%;
-      max-width: 600px;
       background-color: $card-background;
       border-radius: $border-radius-md;
       box-shadow: $shadow-small;

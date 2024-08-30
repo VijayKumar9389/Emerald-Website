@@ -31,8 +31,8 @@ const PropertyList: React.FC<PropertyListProps> = ({listings}) => {
                             <img src={listing.photos[0]} alt={listing.title}/>
                         </div>
                         <div className="property-details">
-                        <h4 className="property-title">{listing.title}</h4>
-                            <h5 className="property-price">{listing.price}</h5>
+                        <h2 className="property-title">{listing.title}</h2>
+                            <h4 className="property-price">{listing.price}</h4>
                             <div className="property-info">
                                 <span>{listing.bedrooms} Beds</span> | <span>{listing.bathrooms} Baths</span> | <span>{listing.size}</span>
                             </div>
