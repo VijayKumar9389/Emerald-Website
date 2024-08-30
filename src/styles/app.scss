@@ -4,7 +4,7 @@
     background-color: $background-color;
 
     .header-container {
-        margin-bottom: 2rem;
+        margin-bottom: $spacing-sm;
 
         h1 {
             color: #333; // Dark color for the heading

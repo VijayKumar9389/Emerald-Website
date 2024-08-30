@@ -2,10 +2,10 @@
 
 .listing-main-photo {
   text-align: center;
-  margin-bottom: $spacing-xl;
-
   .main-photo {
     max-width: 100%;
     height: auto;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-small;
   }
 }

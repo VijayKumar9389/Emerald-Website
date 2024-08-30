@@ -1,64 +1,45 @@
 @import '../../styles/theme.scss';
 
 .listing-container {
+  background-color: $background-color;
 
   .listing-content {
     padding: 2rem;
     max-width: $breakpoint-xxl;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm; // Default gap for smallest screens
 
     // Media Query for medium devices (up to 768px)
     @media (max-width: $breakpoint-sm) {
       padding: $spacing-sm; // Small padding for small screens
+      gap: $spacing-sm; // Small gap for small screens
     }
 
     // Media Query for medium to large devices (768px to 1024px)
     @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
       padding: $spacing-md; // Medium padding for medium screens
+      gap: $spacing-md; // Medium gap for medium screens
     }
 
     // Media Query for large devices (1024px to 1200px)
     @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
       padding: $spacing-lg; // Large padding for larger screens
+      gap: $spacing-lg; // Large gap for larger screens
     }
 
     // Media Query for extra large devices (1200px and up)
     @media (min-width: $breakpoint-lg) {
       padding: $spacing-xl; // Extra large padding for extra large screens
-    }
-
-    .back-button {
-      margin-bottom: $spacing-lg;
+      gap: $spacing-xl; // Extra large gap for extra large screens
     }
   }
 
   .map-iframe {
     width: 100%;
     height: 450px;
-    border-radius: $border-radius-lg;
-    border: 1px solid $border-color;
-    margin-bottom: $spacing-xl;
-    box-shadow: $shadow-small;
-  }
-
-  .listing-title {
-    font-weight: $font-weight-medium;
-    color: $text-primary;
-  }
-
-  .listing-price {
-    color: $primary-color;
-    margin-bottom: $spacing-xl;
-  }
-
-
-  .listing-details {
-    color: $text-primary;
-    margin-bottom: $spacing-lg;
-
-    .listing-description {
-      margin-bottom: $spacing-xl;
-    }
+    border-radius: $border-radius-md;
   }
 
   .footer {
@@ -70,8 +51,8 @@
     bottom: 0;
     width: 100%;
     backdrop-filter: blur(10px); /* Smooth background blur */
-    background: rgba(255, 255, 255, 0.85); /* Slight transparency for a modern look */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for separation */
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency for a modern look */
+    box-shadow: $shadow-small; /* Subtle shadow for separation */
     z-index: 1000; /* Ensures the footer stays above other content */
   }
 }

@@ -8,6 +8,9 @@
 
   .section {
     padding: $spacing-md;
+    background-color: $card-background;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-medium; // Applying the medium shadow for a balanced emphasis
 
     .section-header {
       display: flex;

@@ -5,7 +5,6 @@
   width: 100%;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
 
   .custom-shape-divider-top-1724972679 {
     position: absolute;
@@ -19,7 +18,7 @@
   .custom-shape-divider-top-1724972679 svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
+    width: 100%; // Ensures the SVG scales with the container
     height: 150px;
   }
 
@@ -32,10 +31,14 @@
   position: relative;
   min-height: 50vh;
   height: fit-content;
-  overflow: hidden;
+  overflow: hidden; // Ensure no content spills out
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: $spacing-md; // Added padding to avoid content touching edges
+  box-sizing: border-box; // Ensure padding is included in height calculations
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-small;
 }
 
 .logo {
@@ -47,7 +50,7 @@
 }
 
 .hero-content {
-  position: absolute;
+  position: relative; // Changed to relative to prevent overflow issues
   z-index: 3;
   text-align: center;
   color: #fff;
@@ -77,10 +80,10 @@
   z-index: 1;
   filter: brightness(0.7);
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-  overflow: hidden;
   background-color: black;
   opacity: 0;
-  transform: scale(1.1); // Slightly scaled for the transition effect
+  transform: scale(1.05); // Reduced scale to avoid overflow
+  overflow: hidden;
 
   &.fade-in {
     opacity: 1;
@@ -89,7 +92,7 @@
 
   &.fade-out {
     opacity: 0;
-    transform: scale(1.1); // Keep scaling while fading out
+    transform: scale(1.05); // Slight scaling while fading out
   }
 
   &::before {

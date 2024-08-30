@@ -43,17 +43,15 @@ const ListingPage: React.FC = () => {
                 <BackButton onClick={() => navigate(-1)} />
                 <ListingMainPhoto src={mainPhoto} />
                 <ListingPhotos photos={listing.photos} mainPhoto={mainPhoto} onPhotoClick={setMainPhoto} />
-                <h1 className="listing-title">{listing.title}</h1>
-                <h3 className="listing-price">{listing.price}</h3>
-                <div className="listing-details">
-                    <p className="listing-description">{listing.description}</p>
-                    <ListingDetails
-                        bedrooms={listing.bedrooms}
-                        bathrooms={listing.bathrooms}
-                        size={listing.size}
-                        propertyType={listing.propertyType}
-                    />
-                </div>
+                <ListingDetails
+                    title={listing.title}
+                    price={listing.price}
+                    description={listing.description}
+                    bedrooms={listing.bedrooms}
+                    bathrooms={listing.bathrooms}
+                    size={listing.size}
+                    propertyType={listing.propertyType}
+                />
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.8181801692617!2d-104.6496318367994!3d50.46311036737269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1e8745881b8d%3A0xac6b2b46d2a22de2!2s4800%204%20Ave%2C%20Regina%2C%20SK%20S4T%200J2!5e0!3m2!1sen!2sca!4v1723402795268!5m2!1sen!2sca"
                     width="600"

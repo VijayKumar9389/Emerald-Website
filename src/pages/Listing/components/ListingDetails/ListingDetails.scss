@@ -2,32 +2,54 @@
 
 .listing-detail-overview {
   display: flex;
-  flex-wrap: wrap;
-  gap: $spacing-md;
-  list-style: none;
+  flex-direction: column;
+  border-radius: $border-radius-lg;
 
+  .listing-title {
+    font-weight: $font-weight-medium;
+    color: $text-primary;
+  }
 
-  .stat-card {
+  .listing-price {
+    color: $primary-color;
+    margin-bottom: $spacing-md;
+  }
+
+  .listing-description {
+    color: $text-secondary;
+    line-height: 1.6;
+    margin-bottom: $spacing-lg;
+  }
+
+  .listing-stats {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     gap: $spacing-sm;
-    background-color: $card-background;
-    border-radius: 50px ;
-    border: 1px solid $border-color;
-    padding: $spacing-sm $spacing-md;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 
-    .stat-card__icon {
-      font-size: 24px;
-      color: $primary-color; // Icon color
-    }
+    .stat-card {
+      display: flex;
+      align-items: center;
+      padding: $spacing-sm $spacing-md;
+      background-color: $card-background;
+      border-radius: 50px;
+      border: 1px solid $border-color;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
 
-    .stat-card__label {
-      color: $text-secondary; // Secondary text color
+      .stat-card__icon {
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-right: $spacing-md;
+      }
 
-      strong {
-        color: $text-primary;
+      .stat-card__label {
+        font-size: 1rem;
+        color: $text-secondary;
+
+        strong {
+          font-weight: $font-weight-bold;
+          color: $text-primary;
+        }
       }
     }
   }

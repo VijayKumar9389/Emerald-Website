@@ -4,8 +4,7 @@
   display: flex;
   gap: $spacing-md; // Increased spacing for a more modern layout
   overflow-x: auto;
-  padding: $spacing-md $spacing-xs;
-  margin-bottom: $spacing-lg;
+  padding: $spacing-md 0;
   scroll-snap-type: x mandatory; // For smooth scrolling experience
   -webkit-overflow-scrolling: touch; // Enable smooth scrolling on touch devices
 
@@ -13,9 +12,10 @@
     width: 150px;
     height: 100px;
     object-fit: cover;
-    border-radius: $border-radius-md; // Updated border radius for a modern look
+    border-radius: $border-radius-sm; // Updated border radius for a modern look
     cursor: pointer;
     transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; // Added box-shadow transition
+    box-shadow: $shadow-small;
 
     &:hover {
       transform: scale(1.05);
