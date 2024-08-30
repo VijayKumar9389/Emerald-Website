@@ -50,7 +50,6 @@ function Hero() {
 
             <div className="hero-wrapper">
                 <div className="hero-content">
-                    <p className="hero-description">Discover luxury like never before</p>
                     <h1 className="hero-title">{sections[currentSection].title}</h1>
                 </div>
 

@@ -8,7 +8,7 @@
     padding: $spacing-sm;
     display: flex;
     flex-direction: column;
-    gap: $spacing-xl; // Default gap for smallest screens
+    gap: 4rem; // Default gap for smallest screens
 
     // Media Query for small devices (up to 768px)
     @media (max-width: $breakpoint-sm) {

@@ -4,7 +4,6 @@
   display: flex;
   gap: $spacing-md; // Increased spacing for a more modern layout
   overflow-x: auto;
-  padding: $spacing-md 0;
   scroll-snap-type: x mandatory; // For smooth scrolling experience
   -webkit-overflow-scrolling: touch; // Enable smooth scrolling on touch devices
 

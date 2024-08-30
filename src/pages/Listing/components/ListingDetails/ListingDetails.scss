@@ -17,14 +17,13 @@
 
   .listing-description {
     color: $text-secondary;
-    line-height: 1.6;
-    margin-bottom: $spacing-lg;
   }
 
   .listing-stats {
     display: flex;
     flex-wrap: wrap;
     gap: $spacing-sm;
+    margin: $spacing-lg 0;
 
     .stat-card {
       display: flex;

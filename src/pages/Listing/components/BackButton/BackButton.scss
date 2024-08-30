@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: space-between; /* Space between button and logo */
   gap: $spacing-md; /* Space between the button and the logo */
-  margin-top: $spacing-lg;
 
   .back-button {
     display: flex;
@@ -38,8 +37,4 @@
     }
   }
 
-  .listing-logo {
-    max-width: 100px; /* Limit logo size */
-    height: auto; /* Maintain aspect ratio */
-  }
 }
