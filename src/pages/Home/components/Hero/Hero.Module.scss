@@ -1,29 +1,28 @@
 @import "../../../../styles/theme.scss";
 
 .hero-container {
-  max-width: $breakpoint-xxl;
   width: 100%;
   margin: 0 auto;
   position: relative;
 
-  .custom-shape-divider-top-1724972679 {
+  .custom-shape-divider-bottom-1725074822 {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
   }
 
-  .custom-shape-divider-top-1724972679 svg {
+  .custom-shape-divider-bottom-1725074822 svg {
     position: relative;
     display: block;
-    width: 100%; // Ensures the SVG scales with the container
-    height: 150px;
+    width: calc(179% + 1.3px);
+    height: 458px;
   }
 
-  .custom-shape-divider-top-1724972679 .shape-fill {
-    fill: #fff;
+  .custom-shape-divider-bottom-1725074822 .shape-fill {
+    fill: #F7F9FA;
   }
 }
 
@@ -31,26 +30,24 @@
   position: relative;
   min-height: 50vh;
   height: fit-content;
-  overflow: hidden; // Ensure no content spills out
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: $spacing-md; // Added padding to avoid content touching edges
-  box-sizing: border-box; // Ensure padding is included in height calculations
-  border-radius: $border-radius-lg;
-  box-shadow: $shadow-small;
+  padding: $spacing-md;
+  box-sizing: border-box;
 }
 
 .logo {
   width: 150px;
-  margin-bottom: $spacing-md;
+  margin: $spacing-md;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
   z-index: 2;
   position: relative;
 }
 
 .hero-content {
-  position: relative; // Changed to relative to prevent overflow issues
+  position: relative;
   z-index: 3;
   text-align: center;
   color: #fff;
@@ -77,19 +74,20 @@
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
   background-color: $background-color;
   opacity: 0;
-  transform: scale(1.05); // Reduced scale to avoid overflow
+  transform: scale(1.05);
   overflow: hidden;
 
   &.fade-in {
     opacity: 1;
-    transform: scale(1); // Reset scale on fade-in
+    transform: scale(1);
   }
 
   &.fade-out {
     opacity: 0;
-    transform: scale(1.05); // Slight scaling while fading out
+    transform: scale(1.05);
   }
 
+  // Pseudo-element for the fade effect
   &::before {
     content: '';
     position: absolute;
@@ -97,8 +95,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.5) 0%,
+                    rgba(0, 0, 0, 0) 30%,
+                    rgba(0, 0, 0, 0) 70%,
+                    rgba(0, 0, 0, 0.5) 100%
+    );
     z-index: 2;
+    pointer-events: none; // Ensure it doesn't interfere with user interactions
   }
 }
 

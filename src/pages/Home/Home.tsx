@@ -12,8 +12,8 @@ const Home = () => {
 
     return (
         <div className="home-container">
+            <Hero/>
             <div className="home-body">
-                <Hero/>
                 <PropertyList listings={listingData}/>
                 <Services/>
                 <QASection/>

@@ -5,6 +5,7 @@
   background-color: $footer-background;
   color: $text-white;
   padding-bottom: $spacing-xl;
+  overflow: hidden;
 
   .custom-shape-divider-bottom-1724972817 {
     position: relative;
@@ -32,6 +33,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: $spacing-lg;
+
 
     .footer-section {
       flex: 1;
@@ -46,12 +49,12 @@
       p {
         margin: 0;
         a {
-          color: $link-color;
+          color: $primary-color;
           text-decoration: none;
           transition: color 0.3s ease;
 
           &:hover {
-            color: lighten($link-color, 10%);
+            color: lighten($primary-color, 10%);
           }
         }
       }
@@ -60,7 +63,7 @@
 
   .footer-bottom {
     text-align: center;
-    margin-top: $spacing-lg;
-    font-size: 0.875rem;
+    margin-bottom: $spacing-lg;
+    font-weight: $font-weight-bold;
   }
 }
