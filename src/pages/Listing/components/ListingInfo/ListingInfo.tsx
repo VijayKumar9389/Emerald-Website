@@ -20,8 +20,8 @@ const ListingInfo: React.FC<ListingInfoProps> = ({ features, amenities, nearbyAt
             {sections.map((section, idx) => (
                 <div className="listing-info__section" key={idx}>
                     <div className="listing-info__section-header">
-                        <div className="listing-info__section-icon">{section.icon}</div>
                         <h4 className="listing-info__section-title">{section.title}</h4>
+                        <div className="listing-info__section-icon">{section.icon}</div>
                     </div>
                     <ul className="listing-info__list">
                         {section.items.map((item, index) => (

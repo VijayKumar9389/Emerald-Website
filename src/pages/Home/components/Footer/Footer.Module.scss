@@ -6,8 +6,7 @@
   color: $text-white;
   padding: $spacing-xl 0;
   overflow: hidden;
-  border-bottom-left-radius: $border-radius-lg;
-  border-bottom-right-radius: $border-radius-lg;
+  border-radius: $border-radius-lg;
 
   .footer-content {
     display: flex;

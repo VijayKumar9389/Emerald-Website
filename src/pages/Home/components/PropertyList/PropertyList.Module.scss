@@ -8,7 +8,7 @@
 
 .property-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // More responsive grid
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); // More responsive grid
   gap: $spacing-lg; // Increased gap for better spacing
 }
 

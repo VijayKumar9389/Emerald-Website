@@ -13,11 +13,13 @@
     background-color: $card-background; // A subtle light background for the section
     border-radius: $border-radius-md;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid $border-color;
   }
 
   &__section-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: $spacing-md;
   }
 

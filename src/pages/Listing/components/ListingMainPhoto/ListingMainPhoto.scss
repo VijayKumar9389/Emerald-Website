@@ -8,7 +8,7 @@
   .main-photo {
     width: 100%; // Ensures responsiveness
     height: auto;
-    border-radius: $border-radius-sm; // Subtle rounded corners for modern aesthetics
+    border-radius: $border-radius-md; // Subtle rounded corners for modern aesthetics
     box-shadow: $shadow-small; // Lighter shadow for a minimalistic design
     transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for hover effects
   }
