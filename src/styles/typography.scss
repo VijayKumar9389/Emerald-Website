@@ -89,7 +89,6 @@ h2 {
 
 h3 {
   font-size: $font-size-h3;
-  font-weight: $font-weight-medium;
 
   @media (max-width: $breakpoint-xs) {
     font-size: $font-size-h3-xs;
@@ -102,7 +101,6 @@ h3 {
 
 h4 {
   font-size: $font-size-h4;
-  font-weight: $font-weight-medium;
 
   @media (max-width: $breakpoint-xs) {
     font-size: $font-size-h4-xs;
@@ -115,7 +113,6 @@ h4 {
 
 h5 {
   font-size: $font-size-h5;
-  font-weight: $font-weight-regular;
 
   @media (max-width: $breakpoint-xs) {
     font-size: $font-size-h5-xs;
@@ -128,7 +125,6 @@ h5 {
 
 h6 {
   font-size: $font-size-h6;
-  font-weight: $font-weight-regular;
 
   @media (max-width: $breakpoint-xs) {
     font-size: $font-size-h6-xs;

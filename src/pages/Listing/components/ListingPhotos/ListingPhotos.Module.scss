@@ -2,28 +2,52 @@
 
 .listing-photos {
   display: flex;
-  gap: $spacing-md; // Increased spacing for a more modern layout
+  gap: $spacing-lg; // Reduced gap for a more compact look
   overflow-x: auto;
-  scroll-snap-type: x mandatory; // For smooth scrolling experience
-  -webkit-overflow-scrolling: touch; // Enable smooth scrolling on touch devices
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: $spacing-md $spacing-sm; // Balanced padding around photos
+
+  /* Custom Scrollbar */
+  &::-webkit-scrollbar {
+    height: 6px; // Sleeker, smaller scrollbar height
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color; // Thumb color
+    border-radius: 50px; // Fully rounded thumb for modern touch
+    transition: background-color 0.3s ease;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: lighten($primary-color, 15%); // Subtle hover effect
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05); // Lighter track for subtlety
+    border-radius: 50px;
+  }
 
   .listing-photo {
-    width: 150px;
-    height: 100px;
+    width: 160px; // Reduced width for cleaner look
+    height: 100px; // Adjusted height for a balanced aspect ratio
     object-fit: cover;
-    border-radius: $border-radius-sm; // Updated border radius for a modern look
+    border-radius: $border-radius-sm; // Slightly smaller border radius for elegance
     cursor: pointer;
-    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; // Added box-shadow transition
-    box-shadow: $shadow-small;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; // Simplified transitions
+    box-shadow: $shadow-small; // Lighter shadow for a more minimalistic style
+    filter: grayscale(50%); // Light grayscale effect to emphasize focus
 
     &:hover {
-      transform: scale(1.05);
-      box-shadow: $shadow-small; // Added shadow on hover for a modern effect
+      transform: scale(1.03); // Slight scale on hover for subtle emphasis
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); // Lighter hover shadow
+      filter: grayscale(0%); // Remove grayscale on hover for clearer focus
     }
 
     &.selected {
-      border: 2px solid $primary-color;
-      box-shadow: 0 0 0 4px rgba($primary-color, 0.2); // Add subtle glow effect for selected state
+      border: 2px solid $primary-color; // Thinner border for selected state
+      box-shadow: 0 0 0 4px rgba($primary-color, 0.2); // Subtle glow effect for selected state
+      transform: scale(1.08); // Slight enlargement for selected image
     }
   }
 }

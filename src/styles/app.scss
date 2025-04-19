@@ -3,20 +3,6 @@
 .app-container {
     background-color: $background-color;
 
-    .header-container {
-        margin-bottom: $spacing-sm;
-
-        h1 {
-            color: #333; // Dark color for the heading
-            font-weight: $font-weight-medium;
-        }
-
-        p {
-            color: #666; // Lighter color for the paragraph
-        margin: 0 auto;
-        }
-    }
-
     .btn {
         background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%)); /* Gradient background */
         color: $text-white; /* White text for contrast */

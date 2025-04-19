@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './QASection.Module.scss';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaPlus, FaMinus } from 'react-icons/fa'; // Import the plus and minus icons
+import SectionHeader from "../../../../components/Header/SectionHeader.tsx";
 
 interface QA {
     question: string;
@@ -39,11 +40,10 @@ const QASection: React.FC = () => {
 
     return (
         <div className="qa-section">
-            <div className="header-container">
-                <h1>Frequently Asked Questions</h1>
-                <p>Got questions about our rental properties or the leasing process? We've got answers. Below you'll
-                    find some of the most common inquiries from our renters.</p>
-            </div>
+            <SectionHeader
+                title="Frequently Asked Questions"
+                description="Got questions about our rental properties or the leasing process? We've got answers. Below you'll find some of the most common inquiries from our renters."
+            />
             <div className="qa-container">
                 {questions.map((qa, index) => (
                     <div
@@ -52,11 +52,11 @@ const QASection: React.FC = () => {
                         onClick={() => toggleAnswer(index)}
                     >
                         <div className={`qa-question ${activeIndex === index ? 'active' : ''}`}>
-                            <h5>{qa.question}</h5>
+                            <h6>{qa.question}</h6>
                             {activeIndex === index ? (
-                                <FaChevronUp className="icon" />
+                                <FaMinus className="icon" /> // Display minus when answer is open
                             ) : (
-                                <FaChevronDown className="icon"/>
+                                <FaPlus className="icon" /> // Display plus when answer is closed
                             )}
                         </div>
                         <div className={`qa-answer ${activeIndex === index ? 'active' : ''}`}>

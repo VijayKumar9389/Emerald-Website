@@ -8,52 +8,68 @@
 
 .property-list {
   display: grid;
-  gap: $spacing-lg;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // More responsive grid
+  gap: $spacing-lg; // Increased gap for better spacing
 }
 
 .property-card {
   position: relative;
   display: flex;
   flex-direction: column;
+  border-radius: $border-radius-md; // Soft rounded corners
+  overflow: hidden;
+  transition: transform 0.3s ease; // Smooth hover effect
 
   .property-image {
     position: relative;
-    height: 400px; // Reduced height for a balanced look
+    height: 400px; // Adjusted height for a balanced look
     overflow: hidden;
-    border-radius: $border-radius-md;
-    box-shadow: $shadow-small;
-    margin: 0;
+    margin-bottom: $spacing-md;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: $border-radius-md;
     }
   }
 
   .property-details {
-    padding: $spacing-lg 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
+    gap: $spacing-md;
+    color: $text-primary;
+
 
     .property-title {
+      font-weight: 600;
       color: $text-primary;
-      font-weight: $font-weight-medium;
+      margin-bottom: $spacing-xs;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     .property-price {
+      font-weight: 500;
       color: $primary-color;
     }
 
     .property-info {
       color: $text-secondary;
-      margin: $spacing-md 0;
+      font-size: 0.95rem;
+      display: flex;
+      gap: $spacing-sm;
 
-      span {
-        margin-right: $spacing-sm;
+      span::after {
+        content: "•";
+        margin-left: $spacing-sm;
+        color: $text-secondary;
+      }
+
+      span:last-child::after {
+        content: "";
+        margin: 0;
       }
     }
   }

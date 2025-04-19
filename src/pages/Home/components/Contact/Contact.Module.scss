@@ -2,9 +2,6 @@
 
 /* Contact.Module.scss */
 .contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   max-width: $breakpoint-xxl;
   margin: 0 auto;
@@ -30,15 +27,20 @@
 
     .contact-form {
       width: 100%;
-      background-color: $card-background;
+      background-color: #fff;  // A lighter background for simplicity
       border-radius: $border-radius-md;
-      box-shadow: $shadow-small;
       padding: $spacing-lg;
       display: flex;
       flex-direction: column;
       gap: $spacing-md;
       position: relative;
       z-index: 1; // Ensure form is above the image
+      transition: transform 0.3s ease; // Smooth hover effect for form
+
+      .form-footer {
+        display: flex;
+        justify-content: flex-end;
+      }
 
       label {
         display: flex;
@@ -47,7 +49,9 @@
         color: $text-primary;
         margin-bottom: $spacing-sm;
 
-        input, select, textarea {
+        input,
+        select,
+        textarea {
           margin-top: $spacing-sm;
           padding: $spacing-md;
           border-radius: $border-radius-sm;
@@ -74,7 +78,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: $breakpoint-sm) {
+@media (max-width: $breakpoint-lg) {
   .contact-form {
     padding: $spacing-md;
   }

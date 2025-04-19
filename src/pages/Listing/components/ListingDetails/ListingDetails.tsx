@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBed, FaBath, FaRulerCombined, FaHome } from 'react-icons/fa';
+import { FaBed, FaBath, FaRulerCombined } from 'react-icons/fa';
 import './ListingDetails.scss';
 
 interface ListingDetailsProps {
@@ -8,9 +8,10 @@ interface ListingDetailsProps {
     description: string;
     bedrooms: number;
     bathrooms: number;
-    size: string;
+    size: string;  // "size" can be passed as a string if it contains units (e.g., "1500 sq ft")
     propertyType: string;
 }
+
 
 const ListingDetails: React.FC<ListingDetailsProps> = ({
                                                            title,
@@ -19,7 +20,6 @@ const ListingDetails: React.FC<ListingDetailsProps> = ({
                                                            bedrooms,
                                                            bathrooms,
                                                            size,
-                                                           propertyType,
                                                        }) => {
     const renderDetailItem = (
         Icon: React.ComponentType<{ className?: string }>,
@@ -28,20 +28,25 @@ const ListingDetails: React.FC<ListingDetailsProps> = ({
     ) => (
         <div className="stat-card">
             <Icon className="stat-card__icon" />
-            <p className="stat-card__label"><strong>{value}</strong> {label}</p>
+            <div className="stat-card__label">
+                <strong>{value}</strong> {label}
+            </div>
         </div>
     );
 
     return (
         <div className="listing-detail-overview">
-            <h1 className="listing-title">{title}</h1>
-            <h3 className="listing-price">{price}</h3>
-            <p className="listing-description">{description}</p>
-            <div className="listing-stats">
-                {renderDetailItem(FaBed, 'Bedrooms', bedrooms)}
-                {renderDetailItem(FaBath, 'Bathrooms', bathrooms)}
+
+            <div>
+                <h1 className="listing-title">{title}</h1>
+                <h3 className="listing-price">{price}</h3>
+                <p className="listing-description">{description}</p>
+            </div>
+
+            <div className="stat-card-container">
+                {renderDetailItem(FaBed, 'Bedrooms', `${bedrooms} Beds`)}
+                {renderDetailItem(FaBath, 'Bathrooms', `${bathrooms} Baths`)}
                 {renderDetailItem(FaRulerCombined, 'Size', size)}
-                {renderDetailItem(FaHome, 'Type', propertyType)}
             </div>
         </div>
     );

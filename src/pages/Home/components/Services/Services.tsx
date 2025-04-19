@@ -1,6 +1,7 @@
 import React from 'react';
 import './Services.Module.scss';
-import { FaBuilding, FaCalendarCheck, FaDollarSign, FaKey, FaLocationArrow, FaConciergeBell } from 'react-icons/fa';
+import {FaBuilding, FaCalendarCheck, FaDollarSign, FaKey, FaLocationArrow, FaConciergeBell} from 'react-icons/fa';
+import SectionHeader from "../../../../components/Header/SectionHeader.tsx";
 
 export const skillsData = [
     {
@@ -43,7 +44,7 @@ const Skill = ({title, description, icon: Icon}: { title: string; description: s
                 <Icon/>
             </div>
             <div className="skill-content" data-aos="fade-up">
-                <h4 className="skill-title">{title}</h4>
+                <h5 className="skill-title">{title}</h5>
                 <p className="skill-description">{description}</p>
             </div>
         </div>
@@ -55,11 +56,10 @@ const Skills = () => {
 
     return (
         <div className="skills-container">
-            <div className="header-container">
-                <h1>Services We Offer</h1>
-                <p>Renters in Windsor looking for a condominium, townhouse, apartment, or house rental have come to the
-                    right place.</p>
-            </div>
+            <SectionHeader
+                title="Services We Offer"
+                description="Renters in Windsor looking for a condominium, townhouse, apartment, or house rental have come to the right place."
+            />
             <div className="skills-wrapper">
                 {skillsData.map((skill, index) => (
                     <Skill key={index} {...skill} />

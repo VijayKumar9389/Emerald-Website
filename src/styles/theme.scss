@@ -1,14 +1,27 @@
-// Colors
-$primary-color: #2ecc71;              // Vibrant green for primary actions (e.g., buttons)
-$secondary-color: #27ae60;            // Darkened primary color for secondary actions
-$background-color: #f7f9fa;           // Light, neutral background for a clean look
-$card-background: #ffffff;            // Pure white for cards to ensure content stands out
-$footer-background: #1e1e1e;            // Pure white for cards to ensure content stands out
-$text-primary: #333333;               // Dark gray for primary text to enhance readability
-$text-secondary: #666666;             // Medium gray for secondary text (e.g., subtitles)
-$text-white: #fff;             // Medium gray for secondary text (e.g., subtitles)
-$border-color: #ddd;               // Light gray for subtle borders, creating separation
-$link-color: #3498db;                 // Blue for links to draw attention without overwhelming
+// Primary Brand Colors
+$primary-color: #4CAF50;              // Fresh, vibrant green for primary actions (e.g., buttons)
+$secondary-color: #388E3C;           // Calming Sky Blue — adds friendliness and approachability
+
+// Neutrals & Backgrounds
+$background-color: #F8FAFC;       // Soft off-white — for a clean, breathable layout
+$card-background: #FFFFFF;        // Pure white — ensures sharp content presentation
+$footer-background: #1E293B;      // Deep navy-gray — sleek, professional footer
+
+// Text Colors
+$text-primary: #0F172A;           // Charcoal Navy — strong for primary text
+$text-secondary: #64748B;         // Cool gray-blue — great for secondary info/text
+$text-white: #FFFFFF;             // Standard white for contrast on dark backgrounds
+
+// Borders, Dividers, etc.
+$border-color: #E2E8F0;           // Light gray-blue — gentle separation without distraction
+
+// Accent / Link Colors
+$link-color: #3B82F6;             // Vibrant blue — modern, clean, and accessible for links
+
+// Optional Extras
+$success-color: #22C55E;          // Fresh green — confirmations, success messages
+$warning-color: #FACC15;          // Golden yellow — warnings without aggression
+$error-color: #EF4444;            // Soft red — for gentle error messaging      // Slightly muted blue for links, ensuring it stands out without overwhelming
 
 // Spacing with rem units
 $spacing-xs: 0.25rem; // 4px

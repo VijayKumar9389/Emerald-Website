@@ -24,8 +24,7 @@
   border-radius: $border-radius-md; // Using border radius variable
   min-width: 250px;
   min-height: 300px;
-  border: 1px solid $border-color; // Using border color variable
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   padding: $spacing-lg; // Using spacing variable for padding
   text-align: center;
   display: flex;
@@ -34,27 +33,30 @@
   gap: $spacing-md;
 
   .skill-icon {
-    font-size: 2rem; // Increased icon size for better visibility
-    color: $text-white; // White icon color for contrast
-    transition: color 0.3s ease-in-out; // Smooth transition for icon color
-    background: linear-gradient(145deg, $primary-color, darken($primary-color, 15%)); // Gradient background for icon
-    padding: $spacing-md; // Increased padding for better spacing
-    border-radius: 50%; // Circular background for the icon
+    background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+    color: $text-white;
+    font-size: 2rem;
+    padding: $spacing-md;
+    border-radius: 50%;
+    margin-bottom: $spacing-md;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); // Subtle inset shadow for depth
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
 
   .skill-content {
     .skill-title {
-      font-weight: $font-weight-bold; // Using font weight variable for bold title
-      color: $text-primary; // Dark color for the title
-      margin-bottom: $spacing-sm;
+      font-size: 1.2rem;
+      color: $text-primary;
+      margin-bottom: $spacing-xs;
     }
 
     .skill-description {
-      color: $text-secondary; // Lighter color for description
+      font-size: 1.1rem;
+      color: $text-secondary;
+      line-height: 1.6;
+      font-style: italic; // Slightly italicized for emphasis on readability
     }
   }
 }

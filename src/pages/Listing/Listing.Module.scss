@@ -4,32 +4,12 @@
   background-color: $background-color;
 
   .listing-content {
-    padding: 2rem;
+    padding: $spacing-md;
     max-width: $breakpoint-xxl;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: $spacing-xl; // Default gap for smallest screens
-
-    // Media Query for medium devices (up to 768px)
-    @media (max-width: $breakpoint-sm) {
-      padding: $spacing-sm; // Small padding for small screens
-    }
-
-    // Media Query for medium to large devices (768px to 1024px)
-    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
-      padding: $spacing-md; // Medium padding for medium screens
-    }
-
-    // Media Query for large devices (1024px to 1200px)
-    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-      padding: $spacing-lg; // Large padding for larger screens
-    }
-
-    // Media Query for extra large devices (1200px and up)
-    @media (min-width: $breakpoint-lg) {
-      padding: $spacing-xl; // Extra large padding for extra large screens
-    }
   }
 
   .map-iframe {

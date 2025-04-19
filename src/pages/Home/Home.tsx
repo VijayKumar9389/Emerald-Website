@@ -18,8 +18,8 @@ const Home = () => {
                 <Services/>
                 <QASection/>
                 <Contact/>
+                <Footer/>
             </div>
-            <Footer />
         </div>
     );
 }

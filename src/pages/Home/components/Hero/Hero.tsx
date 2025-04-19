@@ -2,85 +2,79 @@ import './Hero.Module.scss';
 import promoOne from '../../../../assets/promo/promoOne.jpg';
 import promoTwo from '../../../../assets/promo/promoTwo.jpg';
 import promoThree from '../../../../assets/promo/promoThree.jpg';
-import { useState, useEffect } from 'react';
 import Logo from "../../../../assets/Logo.png";
+import { useState, useEffect } from 'react';
+
+const TRANSITION_DURATION = 500;
+const SLIDE_INTERVAL = 5000;
 
 const sections = [
     {
         title: 'Elegance Redefined: Premium Suites in Windsor',
-        image: promoOne
+        image: promoOne,
+        alt: 'Premium suite with modern interior in Windsor'
     },
     {
         title: 'Experience Opulence: Luxury Living in Windsor',
-        image: promoTwo
+        image: promoTwo,
+        alt: 'Luxury interior with vibrant lighting'
     },
     {
         title: 'Find Your Sanctuary: The Perfect Suite Awaits',
-        image: promoThree
+        image: promoThree,
+        alt: 'Calm and cozy suite perfect for relaxing'
     }
 ];
 
 function Hero() {
-    const [currentSection, setCurrentSection] = useState(0);
-    const [transitionClass, setTransitionClass] = useState('fade-in');
+    const [current, setCurrent] = useState(0);
+    const [transition, setTransition] = useState('fade-in');
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTransitionClass('fade-out'); // Start fade-out effect
-            setTimeout(() => {
-                setCurrentSection((prevSection) => (prevSection + 1) % sections.length);
-                setTransitionClass('fade-in'); // Start fade-in effect
-            }, 500); // Duration should match the transition time
-        }, 5000); // Change the slide every 5 seconds
-
-        return () => clearInterval(timer);
-    }, []);
-
-    const handleDotClick = (index: number) => {
-        setTransitionClass('fade-out'); // Start fade-out effect
+    const goToSlide = (index: number) => {
+        setTransition('fade-out');
         setTimeout(() => {
-            setCurrentSection(index);
-            setTransitionClass('fade-in'); // Start fade-in effect
-        }, 500); // Duration should match the transition time
+            setCurrent(index);
+            setTransition('fade-in');
+        }, TRANSITION_DURATION);
     };
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            goToSlide((current + 1) % sections.length);
+        }, SLIDE_INTERVAL);
+
+        return () => clearInterval(intervalId);
+    }, [current]);
+
+    const { title, image, alt } = sections[current];
+
     return (
-        <div className="hero-container">
-            <img src={Logo} className="logo" alt="Company Logo"/>
-
-            <div className="hero-wrapper">
-                <div className="hero-content">
-                    <h1 className="hero-title">{sections[currentSection].title}</h1>
-                </div>
-
-                <div
-                    className={`hero-slide ${transitionClass}`}
-                    style={{
-                        backgroundImage: `url(${sections[currentSection].image})`,
-                    }}
-                />
-
-                <div className="dot-indicators">
-                    {sections.map((_, index) => (
-                        <span
-                            key={index}
-                            className={`dot ${currentSection === index ? 'active' : ''}`}
-                            onClick={() => handleDotClick(index)}
-                            role="button"
-                            tabIndex={0}
-                            aria-label={`Slide ${index + 1}`}
-                        />
-                    ))}
-                </div>
+        <div className="hero-wrapper">
+            <div className="hero-icon">
+                <img src={Logo} className="logo" alt="Company Logo" />
             </div>
 
-            <div className="custom-shape-divider-bottom-1725074822">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                     preserveAspectRatio="none">
-                    <path
-                        d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
-                        className="shape-fill"></path>
-                </svg>
+            <div className="hero-content">
+                <h2 className="hero-title">{title}</h2>
+            </div>
+
+            <div
+                className={`hero-slide ${transition}`}
+                style={{ backgroundImage: `url(${image})` }}
+                aria-label={alt}
+            />
+
+            <div className="dot-indicators">
+                {sections.map((_, index) => (
+                    <span
+                        key={index}
+                        className={`dot ${index === current ? 'active' : ''}`}
+                        onClick={() => goToSlide(index)}
+                        role="button"
+                        tabIndex={0}
+                        aria-label={`Go to slide ${index + 1}`}
+                    />
+                ))}
             </div>
         </div>
     );
