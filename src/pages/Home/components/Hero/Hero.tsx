@@ -2,27 +2,21 @@ import './Hero.Module.scss';
 import promoOne from '../../../../assets/promo/promoOne.jpg';
 import promoTwo from '../../../../assets/promo/promoTwo.jpg';
 import promoThree from '../../../../assets/promo/promoThree.jpg';
-import Logo from "../../../../assets/Logo.png";
 import { useState, useEffect } from 'react';
+import logo from "../../../../assets/Logo.png";
 
 const TRANSITION_DURATION = 500;
 const SLIDE_INTERVAL = 5000;
 
 const sections = [
     {
-        title: 'Elegance Redefined: Premium Suites in Windsor',
         image: promoOne,
-        alt: 'Premium suite with modern interior in Windsor'
     },
     {
-        title: 'Experience Opulence: Luxury Living in Windsor',
         image: promoTwo,
-        alt: 'Luxury interior with vibrant lighting'
     },
     {
-        title: 'Find Your Sanctuary: The Perfect Suite Awaits',
         image: promoThree,
-        alt: 'Calm and cozy suite perfect for relaxing'
     }
 ];
 
@@ -46,22 +40,23 @@ function Hero() {
         return () => clearInterval(intervalId);
     }, [current]);
 
-    const { title, image, alt } = sections[current];
+    const { image  } = sections[current];
 
     return (
+        <div>
+            <header className="site-header">
+                <img src={logo} alt="Logo" className="site-logo" />
+            </header>
         <div className="hero-wrapper">
-            <div className="hero-icon">
-                <img src={Logo} className="logo" alt="Company Logo" />
-            </div>
-
             <div className="hero-content">
-                <h2 className="hero-title">{title}</h2>
+                <h1>Short-term to medium-term rentals</h1>
+                <p>We specialize in renting to people between moves, corporations, insurance companies, and business travelers.</p>
             </div>
 
             <div
                 className={`hero-slide ${transition}`}
                 style={{ backgroundImage: `url(${image})` }}
-                aria-label={alt}
+                aria-label={"image"}
             />
 
             <div className="dot-indicators">
@@ -77,6 +72,8 @@ function Hero() {
                 ))}
             </div>
         </div>
+        </div>
+
     );
 }
 

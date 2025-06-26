@@ -3,12 +3,12 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  padding: $spacing-md;
+  padding: 0 $spacing-md;
 
   .home-body {
     display: flex;
     flex-direction: column;
-    gap: 4rem; // Default gap for smallest screens
-    margin-top:  $spacing-lg;
+    gap: 6rem; // Default gap for smallest screens
   }
 }
+

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import { listingData } from '../../data';
 import ListingMainPhoto from "./components/ListingMainPhoto/ListingMainPhoto.tsx";
 import ListingPhotos from "./components/ListingPhotos/ListingPhotos.tsx";
@@ -7,13 +7,13 @@ import ListingDetails from "./components/ListingDetails/ListingDetails.tsx";
 import ListingInfo from "./components/ListingInfo/ListingInfo.tsx";
 import PopupDialog from './components/PopupDialog/PopupDialog.tsx';
 import './Listing.Module.scss';
-import { MdArrowOutward } from "react-icons/md";
+import {MdArrowOutward, MdHome} from "react-icons/md";
 
 const ListingPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const listingId = parseInt(id || '');
     const listing = listingData.find((item) => item.id === listingId);
-
+    const navigate = useNavigate();
     const [mainPhoto, setMainPhoto] = useState<string>('');
     const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -37,6 +37,16 @@ const ListingPage: React.FC = () => {
 
     return (
         <div className="listing-container">
+            <div className="listing-header">
+                <nav className="breadcrumb">
+                    <span className="breadcrumb-link" onClick={() => navigate('/')}>
+                        <MdHome size={18} style={{ marginRight: '0.25rem' }} />
+                        Home
+                    </span>
+                    <span className="breadcrumb-separator">/</span>
+                    <span className="breadcrumb-current">Property Listing</span>
+                </nav>
+            </div>
             <div className="listing-content">
                 {/*<BackButton onClick={() => navigate(-1)} />*/}
                 <ListingMainPhoto src={mainPhoto} />
@@ -50,6 +60,7 @@ const ListingPage: React.FC = () => {
                     size={listing.size}
                     propertyType={listing.propertyType}
                 />
+
                 <ListingInfo
                     features={listing.features}
                     amenities={listing.amenities}
@@ -66,6 +77,8 @@ const ListingPage: React.FC = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
             </div>
+
+
             <div className="footer">
                 <button className="btn" onClick={handleDialogOpen}>Contact Agent <MdArrowOutward className="icon" /></button>
             </div>

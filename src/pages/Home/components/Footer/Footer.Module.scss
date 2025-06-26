@@ -2,11 +2,10 @@
 
 .home-footer {
   position: relative;
-  background: linear-gradient(135deg, $footer-background, darken($footer-background, 20%));  /* Gradient from primary to secondary color */
+  background: #F0F0F0;  /* Gradient from primary to secondary color */
   color: $text-white;
   padding: $spacing-xl 0;
   overflow: hidden;
-  border-radius: $border-radius-lg;
 
   .footer-content {
     display: flex;

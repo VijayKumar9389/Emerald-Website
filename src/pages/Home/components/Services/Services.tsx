@@ -6,7 +6,7 @@ import SectionHeader from "../../../../components/Header/SectionHeader.tsx";
 export const skillsData = [
     {
         title: 'Prime Location Selection',
-        description: 'Choose from a variety of prestigious locations for your executive suite to elevate your business presence.',
+        description: 'Strategically located in the heart of Downtown Windsor along with the scenic district of Riverside and Fontainebleau.',
         icon: FaLocationArrow, // Location arrow icon for location selection
     },
     {
@@ -57,8 +57,8 @@ const Skills = () => {
     return (
         <div className="skills-container">
             <SectionHeader
-                title="Services We Offer"
-                description="Renters in Windsor looking for a condominium, townhouse, apartment, or house rental have come to the right place."
+                title="Why Emerald Executive Housing?"
+                description="we are unwavering in our dedication to exceeding our customers' expectations and ensuring their happiness."
             />
             <div className="skills-wrapper">
                 {skillsData.map((skill, index) => (
