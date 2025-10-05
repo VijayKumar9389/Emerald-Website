@@ -3,15 +3,18 @@
 .home-container {
   display: flex;
   flex-direction: column;
-  gap: 6rem; // Default gap for smallest screens
+  width: 100%;
+  box-sizing: border-box;
+  gap: 6rem; // adjust with media queries
 
   .home-body {
     display: flex;
     flex-direction: column;
-    gap: 6rem; // Default gap for smallest screens
-    padding: 0 $spacing-md;
+    width: 100%;
     max-width: $breakpoint-xxl;
     margin: 0 auto;
+    padding: 0 $spacing-md;
+    box-sizing: border-box;
+    gap: 6rem;
   }
 }
-
