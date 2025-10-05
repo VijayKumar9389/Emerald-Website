@@ -44,46 +44,80 @@ const Contact = () => {
 
     return (
         <div className="contact-container">
-            <div className="contact-overlay"/>
-            <div className="contact-form-wrapper">
-                <form onSubmit={handleSubmit} className="contact-form">
-                    <label htmlFor="name">
-                        My name is
-                        <input type="text" id="name" name="name" placeholder="Your Name" required value={formData.name}
-                               onChange={handleChange}/>
-                    </label>
+            <div className="contact-overlay" />
 
-                    <label htmlFor="budget">
-                        I'm interested in
-                        <select id="budget" name="budget" required value={formData.budget} onChange={handleChange}>
-                            <option value="">Select an option</option>
-                            <option value="123-main-st-windsor">123 Main St, Windsor</option>
-                            <option value="456-elm-st-windsor">456 Elm St, Windsor</option>
-                            <option value="789-oak-st-windsor">789 Oak St, Windsor</option>
-                            <option value="general-inquiry">General Inquiry</option>
-                        </select>
-                    </label>
+            <div className="contact-content">
+                <div className="contact-text">
+                    <h1>Let's Connect</h1>
+                    <p>Send us a quick message — we're happy to help.</p>
+                </div>
 
-                    <label htmlFor="interest">
-                        My Question
-                        <textarea id="interest" name="interest" placeholder="What are you interested in?" required
-                                  value={formData.interest} onChange={handleChange}></textarea>
-                    </label>
+                <div className="contact-form-wrapper">
+                    <form onSubmit={handleSubmit} className="contact-form">
+                        <div className="form-group">
+                            <label htmlFor="name">My name is</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your Name"
+                                required
+                                value={formData.name}
+                                onChange={handleChange}
+                            />
+                        </div>
 
-                    <label htmlFor="email">
-                        Please contact me at
-                        <input type="email" id="email" name="email" placeholder="Your Email" required
-                               value={formData.email} onChange={handleChange}/>
-                    </label>
+                        <div className="form-group">
+                            <label htmlFor="budget">I'm interested in</label>
+                            <select
+                                id="budget"
+                                name="budget"
+                                required
+                                value={formData.budget}
+                                onChange={handleChange}
+                            >
+                                <option value="">Select an option</option>
+                                <option value="123-main-st-windsor">123 Main St, Windsor</option>
+                                <option value="456-elm-st-windsor">456 Elm St, Windsor</option>
+                                <option value="789-oak-st-windsor">789 Oak St, Windsor</option>
+                                <option value="general-inquiry">General Inquiry</option>
+                            </select>
+                        </div>
 
-                    <div className="form-footer">
-                        <button type="submit" className="btn">
-                            Submit <IoIosSend className="icon"/>
-                        </button>
-                    </div>
+                        <div className="form-group">
+                            <label htmlFor="interest">My question is</label>
+                            <textarea
+                                id="interest"
+                                name="interest"
+                                placeholder="What are you interested in?"
+                                required
+                                value={formData.interest}
+                                onChange={handleChange}
+                            ></textarea>
+                        </div>
 
-                    {statusMessage && <p className="status-message">{statusMessage}</p>}
-                </form>
+                        <div className="form-group">
+                            <label htmlFor="email">Please contact me at</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your Email"
+                                required
+                                value={formData.email}
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        <div className="form-footer">
+                            <button type="submit" className="btn">
+                                Send Message <IoIosSend className="icon" />
+                            </button>
+                        </div>
+
+                        {statusMessage && <p className="status-message">{statusMessage}</p>}
+                    </form>
+                </div>
             </div>
         </div>
     );

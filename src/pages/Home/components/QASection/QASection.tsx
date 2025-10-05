@@ -14,7 +14,35 @@ const QASection: React.FC = () => {
     const questions: QA[] = [
         {
             question: "What types of properties do you offer?",
-            answer: "We offer a wide range of rental properties, including condominiums, townhouses, apartments, and single-family homes, all located in prime neighborhoods."
+            answer: "We offer a variety of rental properties including condos, penthouses, and townhouses. Each is fully furnished and designed for comfort, whether for short-term or long-term stays."
+        },
+        {
+            question: "Where are your properties located?",
+            answer: "Our properties are strategically located across Windsor, including downtown, near EC Row Expressway, shopping districts, the waterfront, and close to key attractions like Caesars Windsor and major bridges."
+        },
+        {
+            question: "What amenities are included?",
+            answer: "All rentals come equipped with modern kitchens, in-unit washer and dryer, WiFi, air conditioning, heating, TV, and essentials like towels, linens, and toiletries. Some properties also include pools, gyms, and balconies or patios."
+        },
+        {
+            question: "Can I stay short-term or long-term?",
+            answer: "Yes! We accommodate both short-term stays and long-term rentals, with flexible lease options tailored to your needs."
+        },
+        {
+            question: "Are your properties safe and secure?",
+            answer: "Absolutely. Properties feature smoke and carbon monoxide alarms, exterior cameras in common areas, and secure entry points to ensure your peace of mind."
+        },
+        {
+            question: "Is parking available?",
+            answer: "Yes. Most properties include free on-premises parking, and some offer additional paid or street parking options for guests."
+        },
+        {
+            question: "Are pets allowed?",
+            answer: "Some of our properties allow pets or assistance animals. Please check the listing details for each property before booking."
+        },
+        {
+            question: "How close are the properties to attractions and conveniences?",
+            answer: "Our rentals are within walking distance or a short drive to restaurants, shopping centers, parks, hospitals, and transit hubs. They offer quick access to bridges and tunnels connecting to Detroit."
         },
     ];
 

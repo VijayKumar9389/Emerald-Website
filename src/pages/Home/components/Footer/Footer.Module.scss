@@ -2,7 +2,7 @@
 
 .home-footer {
   position: relative;
-  background: #F0F0F0;  /* Gradient from primary to secondary color */
+  background: $footer-background;  /* Gradient from primary to secondary color */
   color: $text-white;
   padding: $spacing-xl 0;
   overflow: hidden;

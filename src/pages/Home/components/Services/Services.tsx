@@ -5,34 +5,34 @@ import SectionHeader from "../../../../components/Header/SectionHeader.tsx";
 
 export const skillsData = [
     {
-        title: 'Prime Location Selection',
-        description: 'Strategically located in the heart of Downtown Windsor along with the scenic district of Riverside and Fontainebleau.',
-        icon: FaLocationArrow, // Location arrow icon for location selection
+        title: 'Prime Windsor Locations',
+        description: 'Our properties are strategically located near downtown, EC Row Expressway, shopping districts, and scenic waterfront areas, ensuring convenience and accessibility.',
+        icon: FaLocationArrow, // Location arrow icon
     },
     {
-        title: 'Flexible Leasing Options',
-        description: 'Enjoy flexible lease terms tailored to your business needs, with options for short-term and long-term rentals.',
-        icon: FaCalendarCheck, // Calendar check icon for leasing options
+        title: 'Flexible Stay Options',
+        description: 'Choose from short-term or long-term stays with rentals that accommodate different needs, whether a quick city visit or an extended stay.',
+        icon: FaCalendarCheck, // Calendar check icon
     },
     {
-        title: 'Competitive Pricing',
-        description: 'Benefit from competitive pricing models that ensure you get the best value for your executive suite.',
-        icon: FaDollarSign, // Dollar sign icon for pricing
+        title: 'Affordable & Competitive Rates',
+        description: 'Enjoy high-quality accommodations at competitive pricing, offering the best value for comfort, amenities, and location.',
+        icon: FaDollarSign, // Dollar sign icon
     },
     {
-        title: 'Secure Access',
-        description: 'Experience peace of mind with top-notch security measures, including key card access and 24/7 surveillance.',
-        icon: FaKey, // Key icon for secure access
+        title: 'Safe & Secure',
+        description: 'All properties feature home security measures including exterior cameras in common areas, smoke and carbon monoxide alarms, and secure entry points.',
+        icon: FaKey, // Key icon
     },
     {
-        title: 'Professional Amenities',
-        description: 'Access high-quality amenities such as meeting rooms, high-speed internet, and concierge services to support your business operations.',
-        icon: FaConciergeBell, // Concierge bell icon for amenities
+        title: 'Fully Equipped Amenities',
+        description: 'From modern kitchens with full appliances to in-unit laundry, WiFi, entertainment systems, and patios/balconies, each property is ready for a comfortable stay.',
+        icon: FaConciergeBell, // Concierge bell icon
     },
     {
-        title: 'Modern Facilities',
-        description: 'Work in modern, fully-furnished spaces designed to create a productive and professional environment for you and your team.',
-        icon: FaBuilding, // Building icon for modern facilities
+        title: 'Comfortable & Modern Spaces',
+        description: 'Our rentals offer stylish and functional living areas, including condos, penthouses, and townhouses with air conditioning, heating, and well-designed interiors.',
+        icon: FaBuilding, // Building icon
     },
 ];
 

@@ -34,8 +34,8 @@ const PropertyList: React.FC<PropertyListProps> = ({listings}) => {
                         </div>
                         <div className="property-details">
                             <div className="detail-wrapper">
-                                <h6 className="property-price">{listing.price}</h6>
                                 <h5 className="property-title">{listing.title}</h5>
+                                <h6 className="property-price">{listing.price}</h6>
                                 <p className="property-description">{listing.description}</p>
                                 <div className="property-info-grid">
                                     <div className="info-item">

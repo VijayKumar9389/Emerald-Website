@@ -2,14 +2,20 @@
 
 .property-list-container {
   width: 100%;
-  max-width: $breakpoint-xxl;
-  margin: 0 auto;
+
 }
 
 .property-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: $spacing-xl;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
 }
 
 .property-card {

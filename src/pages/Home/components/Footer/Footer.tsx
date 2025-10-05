@@ -1,5 +1,5 @@
 import './Footer.Module.scss';
-import Slider from "../Slider/Slider.tsx"; // Import the SCSS file
+// import Slider from "../Slider/Slider.tsx";
 
 const Footer = () => {
     return (
@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="footer-bottom">
                 <p>&copy; 2024 Emerald Executive Housing. All rights reserved.</p>
             </div>
-            <Slider />
+            {/*<Slider />*/}
         </div>
     );
 };

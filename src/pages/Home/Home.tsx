@@ -14,14 +14,13 @@ const Home = () => {
         <div className="home-container">
             <div className="home-body">
                 {/*<About />*/}
-
                 <Hero/>
                 <PropertyList listings={listingData}/>
                 <Services/>
                 <QASection/>
                 <Contact/>
-                <Footer/>
             </div>
+            <Footer/>
         </div>
     );
 }

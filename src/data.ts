@@ -1,13 +1,38 @@
-// Importing the images as modules to ensure correct typing
-import ImageOne from './assets/Vine.jpg';
-import ImageTwo from './assets/Wyandotte.jpg';
-import ImageThree from './assets/Condo.jpg';
+import WyandotteOne from './assets/Wyandotte/WyandotteOne.jpg'
+import WyandotteOneHalf from './assets/Wyandotte/WyandotteOneHalf.jpg'
+import WyandotteTwo from './assets/Wyandotte/WyandotteTwo.jpg'
+import WyandotteThree from './assets/Wyandotte/WyandotteThree.jpg'
+import WyandotteFour from './assets/Wyandotte/WyandotteFour.jpg'
+import WyandotteFive from './assets/Wyandotte/WyandotteFive.jpg'
 
-import featureOne from './assets/vinecourt/featureOne.jpg';
-import featureTwo from './assets/vinecourt/featureTwo.jpg';
-import featureThree from './assets/vinecourt/featureThree.jpg';
-import featureFour from './assets/vinecourt/featureFour.jpg';
-import featureFive from './assets/vinecourt/featureFive.jpg';
+import ParkOne from './assets/Park/parkOne.jpg'
+import ParkTwo from './assets/Park/parkTwo.jpg'
+import ParkThree from './assets/Park/parkThree.jpg'
+import ParkFour from './assets/Park/parkFour.jpg'
+import ParkFive from './assets/Park/parkFive.jpg'
+import ParkSix from './assets/Park/parkSix.jpg'
+import ParkSeven from './assets/Park/parkSeven.jpg'
+import ParkEight from './assets/Park/parkEight.jpg'
+import ParkNine from './assets/Park/parkNine.jpg'
+import ParkTen from './assets/Park/parkTen.jpg'
+import ParkEleven from './assets/Park/parkEleven.jpg'
+import ParkTwelve from './assets/Park/parkTwelve.jpg'
+
+import VineOne from './assets/Vine/VineOne.jpg'
+import VineTwo from './assets/Vine/VineTwo.jpg'
+import VineThree from './assets/Vine/VineThree.jpg'
+import VineFour from './assets/Vine/VineFour.jpg'
+import VineFive from './assets/Vine/VineFive.jpg'
+import VineSix from './assets/Vine/VineSix.jpg'
+import VineSeven from './assets/Vine/VineSeven.jpg'
+import VineEight from './assets/Vine/VineEight.jpg'
+import VineNine from './assets/Vine/VineNine.jpg'
+import VineTwelve from './assets/Vine/VineTwelve.jpg'
+import VineThirteen from './assets/Vine/VineThirteen.jpg'
+import VineFourteen from './assets/Vine/VineFourteen.jpg'
+import VineFifteen from './assets/Vine/VineFifteen.jpg'
+import VineSeventeen from './assets/Vine/VineSeventeen.jpg'
+import VineEighteen from './assets/Vine/VineEighteen.jpg'
 
 // Define the type for each listing object
 export type ListingDTO = {
@@ -34,146 +59,182 @@ export type ListingDTO = {
         phone: string;
         email: string;
     };
-    photos: string[]; // Assuming the photos are strings representing file paths or imports
+    photos: string[];
 };
 
-// Define the listing data using the `Listing` type
+// Define the listing data using the `ListingDTO` type
 export const listingData: ListingDTO[] = [
     {
         id: 1,
-        title: "123 Vine Street, Springfield",
-        price: "$1,200/month",
-        description: "This charming three-bedroom home offers spacious living areas and a modern kitchen. Located in a quiet neighborhood with excellent schools and parks nearby. Perfect for families looking for a comfortable and convenient living space.",
-        bedrooms: 3,
-        bathrooms: 2,
-        size: "1,500 sq ft",
+        title: "8475 Wyandotte St E, Windsor, ON N8S 0A4",
+        price: "$240/night",
+        description: "High-end 2-bedroom condo in Windsor, with hardwood floors, ceramic bathrooms, full-size washer and dryer. Close to restaurants, supermarkets, shopping centers, and EC Row Expressway.",
+        bedrooms: 2,
+        bathrooms: 1,
+        size: "950 sq ft",
         propertyType: "Condo",
         location: {
-            neighborhood: "Greenwood",
-            city: "Springfield",
-            state: "IL",
-            zip: "62704"
+            neighborhood: "High-End Area",
+            city: "Windsor",
+            state: "ON",
+            zip: "N8S 0A4"
         },
         amenities: [
-            "Central Air Conditioning",
-            "Modern Kitchen",
-            "Hardwood Floors",
-            "Washer/Dryer Included",
-            "Garage"
+            "Air conditioning",
+            "Heating",
+            "Washer & Dryer",
+            "TV",
+            "Wifi",
+            "Dedicated workspace",
+            "Patio/Balcony",
+            "Pool",
+            "Gym",
+            "Elevator"
         ],
         features: [
-            "Spacious Living Room",
-            "Large Backyard",
-            "Near Schools and Parks"
+            "Hardwood floors",
+            "Ceramic and porcelain bathrooms",
+            "Close to shopping and restaurants",
+            "Parking spot in front of entrance"
         ],
         nearbyAttractions: [
-            "Springfield Zoo",
-            "Greenwood Park",
-            "Local Farmers Market"
+            "EC Row Expressway",
+            "Windsor Marina",
+            "Shopping district"
         ],
-        availability: "Available from October 1, 2024",
+        availability: "Available immediately",
         contact: {
-            name: "Jane Doe",
-            phone: "(555) 123-4567",
-            email: "janedoe@example.com"
+            name: "Vijay Kumar",
+            phone: "+1 (306) 994-5031",
+            email: "VijayMKumar2095@gmail.com"
         },
         photos: [
-            ImageOne,
-            featureOne,
-            featureTwo,
-            featureThree,
-            featureFour,
-            featureFive,
+            WyandotteOne,
+            WyandotteOneHalf,
+            WyandotteTwo,
+            WyandotteThree,
+            WyandotteFour,
+            WyandotteFive
         ],
     },
     {
         id: 2,
-        title: "456 Wyandotte Avenue, Springfield",
-        price: "$950/month",
-        description: "A cozy two-bedroom apartment with an open layout and plenty of natural light. Conveniently located near shopping centers and public transport. Ideal for young professionals or small families.",
+        title: "150 Park St W, Windsor, ON N9A 7A2",
+        price: "$275/night",
+        description: "Fully furnished 2-bedroom penthouse suite in downtown Windsor, smoke- and pet-free. Includes utilities, WiFi, pool & exercise room access, en-suite laundry, kitchen supplies, and allocated parking.",
         bedrooms: 2,
-        bathrooms: 1,
-        size: "1,200 sq ft",
+        bathrooms: 1.5,
+        size: "1,240 sq ft",
         propertyType: "Condo",
         location: {
             neighborhood: "Downtown",
-            city: "Springfield",
-            state: "IL",
-            zip: "62701"
+            city: "Windsor",
+            state: "ON",
+            zip: "N9A 7A2"
         },
         amenities: [
-            "Open Floor Plan",
-            "Natural Light",
-            "Near Shopping Centers",
-            "Public Transport Access"
+            "Heating",
+            "Washer & Dryer",
+            "TV",
+            "Wifi",
+            "Pool",
+            "Gym",
+            "Shared hot tub",
+            "Elevator",
+            "Patio/Balcony"
         ],
         features: [
-            "Modern Design",
-            "Convenient Location"
+            "Penthouse level suite",
+            "Private entrance",
+            "Decorative fireplace",
+            "All linens included"
         ],
         nearbyAttractions: [
-            "City Mall",
-            "Public Library",
-            "Coffee Shops"
+            "Caesars Windsor",
+            "Riverwalk",
+            "Ambassador Bridge",
+            "Detroit tunnel"
         ],
         availability: "Available immediately",
         contact: {
-            name: "John Smith",
-            phone: "(555) 987-6543",
-            email: "johnsmith@example.com"
+            name: "Vijay Kumar",
+            phone: "+1 (306) 994-5031",
+            email: "VijayMKumar2095@gmail.com"
         },
         photos: [
-            ImageTwo,
-            featureOne,
-            featureTwo,
-            featureThree,
-            featureFour,
-            featureFive,
+            ParkOne,
+            ParkTwo,
+            ParkThree,
+            ParkFour,
+            ParkFive,
+            ParkSix,
+            ParkSeven,
+            ParkEight,
+            ParkNine,
+            ParkTen,
+            ParkEleven,
+            ParkTwelve
         ],
     },
     {
         id: 3,
-        title: "789 Vine Street, Springfield",
-        price: "$1,500/month",
-        description: "This modern two-bedroom unit features stylish finishes and a spacious layout. Enjoy the benefits of living in a vibrant neighborhood with easy access to amenities and entertainment options.",
-        bedrooms: 2,
+        title: "2650 Vine Ct, Windsor, ON N8T 2X3",
+        price: "$250/night",
+        description: "4-bedroom townhouse near shopping and restaurants, with pool, party facility, and large backyard. Less than 5 min drive to EC Row Expressway, 10 min to airport, 15 min to bridge/tunnel. Refundable deposit $1,000.",
+        bedrooms: 4,
         bathrooms: 2,
-        size: "1,200 sq ft",
-        propertyType: "Condo",
+        size: "1,800 sq ft",
+        propertyType: "Townhouse",
         location: {
-            neighborhood: "Downtown",
-            city: "Springfield",
-            state: "IL",
-            zip: "62701"
+            neighborhood: "Residential Area",
+            city: "Windsor",
+            state: "ON",
+            zip: "N8T 2X3"
         },
         amenities: [
-            "Stylish Finishes",
-            "Spacious Layout",
-            "Fitness Center",
-            "Rooftop Deck"
+            "Air conditioning",
+            "Heating",
+            "Washer & Dryer",
+            "TV",
+            "Wifi",
+            "Pets allowed",
+            "Shared pool",
+            "Parking on premises",
+            "Street parking"
         ],
         features: [
-            "Vibrant Neighborhood",
-            "Close to Entertainment"
+            "Huge backyard",
+            "Walking distance to shopping and park",
+            "Access to pool and party facility",
+            "Refundable deposit $1,000"
         ],
         nearbyAttractions: [
-            "Springfield Museum",
-            "Downtown Shopping District",
-            "Restaurants and Cafés"
+            "EC Row Expressway",
+            "Downtown Windsor",
+            "Nearby schools and restaurants"
         ],
-        availability: "Available from November 1, 2024",
+        availability: "Available immediately",
         contact: {
-            name: "Emily Johnson",
-            phone: "(555) 654-3210",
-            email: "emilyjohnson@example.com"
+            name: "Vijay Kumar",
+            phone: "+1 (306) 994-5031",
+            email: "VijayMKumar2095@gmail.com"
         },
         photos: [
-            ImageThree,
-            featureOne,
-            featureTwo,
-            featureThree,
-            featureFour,
-            featureFive,
+            VineOne,
+            VineTwo,
+            VineThree,
+            VineFour,
+            VineFive,
+            VineSix,
+            VineSeven,
+            VineEight,
+            VineNine,
+            VineTwelve,
+            VineThirteen,
+            VineFourteen,
+            VineFifteen,
+            VineSeventeen,
+            VineEighteen
         ],
     }
 ];

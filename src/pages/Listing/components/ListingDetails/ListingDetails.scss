@@ -6,7 +6,7 @@
   gap: $spacing-md;
 
   .listing-title {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-regular;
     font-size: clamp(1.8rem, 2.5vw, 2.5rem); // Larger, dynamic font size for the title
     color: $text-primary;
     line-height: 1.3;
