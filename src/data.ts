@@ -5,18 +5,18 @@ import WyandotteThree from './assets/Wyandotte/WyandotteThree.jpg'
 import WyandotteFour from './assets/Wyandotte/WyandotteFour.jpg'
 import WyandotteFive from './assets/Wyandotte/WyandotteFive.jpg'
 
-import ParkOne from './assets/Park/parkOne.jpg'
-import ParkTwo from './assets/Park/parkTwo.jpg'
-import ParkThree from './assets/Park/parkThree.jpg'
-import ParkFour from './assets/Park/parkFour.jpg'
-import ParkFive from './assets/Park/parkFive.jpg'
-import ParkSix from './assets/Park/parkSix.jpg'
-import ParkSeven from './assets/Park/parkSeven.jpg'
-import ParkEight from './assets/Park/parkEight.jpg'
-import ParkNine from './assets/Park/parkNine.jpg'
-import ParkTen from './assets/Park/parkTen.jpg'
-import ParkEleven from './assets/Park/parkEleven.jpg'
-import ParkTwelve from './assets/Park/parkTwelve.jpg'
+import ParkOne from './assets/Park/ParkOne.jpg';
+import ParkTwo from './assets/Park/ParkTwo.jpg';
+import ParkThree from './assets/Park/ParkThree.jpg';
+import ParkFour from './assets/Park/ParkFour.jpg';
+import ParkFive from './assets/Park/ParkFive.jpg';
+import ParkSix from './assets/Park/ParkSix.jpg';
+import ParkSeven from './assets/Park/ParkSeven.jpg';
+import ParkEight from './assets/Park/ParkEight.jpg';
+import ParkNine from './assets/Park/ParkNine.jpg';
+import ParkTen from './assets/Park/ParkTen.jpg';
+import ParkEleven from './assets/Park/ParkEleven.jpg';
+import ParkTwelve from './assets/Park/ParkTwelve.jpg';
 
 import VineOne from './assets/Vine/VineOne.jpg'
 import VineTwo from './assets/Vine/VineTwo.jpg'
