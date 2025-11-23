@@ -48,7 +48,7 @@ const PropertyList: React.FC<PropertyListProps> = ({listings}) => {
                                     </div>
                                     <div className="info-item">
                                         <FaTableList className="icon" />
-                                        <span>{listing.size} sqft</span>
+                                        <span>{listing.size}</span>
                                     </div>
                                 </div>
                             </div>

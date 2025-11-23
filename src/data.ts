@@ -71,7 +71,7 @@ export const listingData: ListingDTO[] = [
         description: "High-end 2-bedroom condo in Windsor, with hardwood floors, ceramic bathrooms, full-size washer and dryer. Close to restaurants, supermarkets, shopping centers, and EC Row Expressway.",
         bedrooms: 2,
         bathrooms: 1,
-        size: "950 sq ft",
+        size: "950 sqft",
         propertyType: "Condo",
         location: {
             neighborhood: "High-End Area",
@@ -124,7 +124,7 @@ export const listingData: ListingDTO[] = [
         description: "Fully furnished 2-bedroom penthouse suite in downtown Windsor, smoke- and pet-free. Includes utilities, WiFi, pool & exercise room access, en-suite laundry, kitchen supplies, and allocated parking.",
         bedrooms: 2,
         bathrooms: 1.5,
-        size: "1,240 sq ft",
+        size: "1,240 sqft",
         propertyType: "Condo",
         location: {
             neighborhood: "Downtown",
@@ -183,7 +183,7 @@ export const listingData: ListingDTO[] = [
         description: "4-bedroom townhouse near shopping and restaurants, with pool, party facility, and large backyard. Less than 5 min drive to EC Row Expressway, 10 min to airport, 15 min to bridge/tunnel. Refundable deposit $1,000.",
         bedrooms: 4,
         bathrooms: 2,
-        size: "1,800 sq ft",
+        size: "1,800 sqft",
         propertyType: "Townhouse",
         location: {
             neighborhood: "Residential Area",

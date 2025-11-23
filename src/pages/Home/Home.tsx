@@ -6,14 +6,17 @@ import QASection from "./components/QASection/QASection.tsx";
 import Contact from "./components/Contact/Contact.tsx";
 import './Home.Module.scss';
 import Footer from "./components/Footer/Footer.tsx";
+import logo from "../../assets/Logo.png";
 
 
 const Home = () => {
 
     return (
         <div className="home-container">
+            <header className="site-header">
+                <img src={logo} alt="Logo" className="site-logo" />
+            </header>
             <div className="home-body">
-                {/*<About />*/}
                 <Hero/>
                 <PropertyList listings={listingData}/>
                 <Services/>
