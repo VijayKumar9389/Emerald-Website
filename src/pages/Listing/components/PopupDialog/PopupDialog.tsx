@@ -1,16 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PopupDialog.Module.scss';
-import {MdClose} from "react-icons/md";
-import {IoIosSend} from "react-icons/io";
+import { MdClose } from "react-icons/md";
+import { IoIosSend } from "react-icons/io";
 
 interface PopupDialogProps {
     isOpen: boolean;
     onClose: () => void;
-    listing: string
+    listing: string;
 }
 
 const PopupDialog: React.FC<PopupDialogProps> = ({ isOpen, onClose, listing }) => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [statusMessage, setStatusMessage] = useState('');
+
     if (!isOpen) return null;
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('https://www.trackerinventory.com/customer/create', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    interest: listing,
+                    question: formData.message
+                }),
+            });
+
+            if (response.ok) {
+                setStatusMessage('Your question has been submitted successfully.');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                setStatusMessage('Failed to submit your question. Please try again.');
+            }
+        } catch (error) {
+            setStatusMessage('An error occurred while submitting your question.');
+            console.error('Error submitting form:', error);
+        }
+    };
 
     return (
         <div className="popup-overlay" onClick={onClose}>
@@ -21,7 +62,8 @@ const PopupDialog: React.FC<PopupDialogProps> = ({ isOpen, onClose, listing }) =
                         <MdClose />
                     </button>
                 </div>
-                <form className="contact-form">
+
+                <form className="contact-form" onSubmit={handleSubmit}>
                     <label htmlFor="name">
                         My name is
                         <input
@@ -30,6 +72,8 @@ const PopupDialog: React.FC<PopupDialogProps> = ({ isOpen, onClose, listing }) =
                             name="name"
                             placeholder="Your Name"
                             required
+                            value={formData.name}
+                            onChange={handleChange}
                         />
                     </label>
 
@@ -45,6 +89,8 @@ const PopupDialog: React.FC<PopupDialogProps> = ({ isOpen, onClose, listing }) =
                             name="message"
                             placeholder="What are you interested in?"
                             required
+                            value={formData.message}
+                            onChange={handleChange}
                         ></textarea>
                     </label>
 
@@ -56,10 +102,15 @@ const PopupDialog: React.FC<PopupDialogProps> = ({ isOpen, onClose, listing }) =
                             name="email"
                             placeholder="Your Email"
                             required
+                            value={formData.email}
+                            onChange={handleChange}
                         />
                     </label>
 
-                    <button type="submit" className="btn">Send Message <IoIosSend className="icon" /></button>
+                    <button type="submit" className="btn">
+                        Send Message <IoIosSend className="icon" />
+                    </button>
+                    {statusMessage && <p className="status-message">{statusMessage}</p>}
                 </form>
             </div>
         </div>

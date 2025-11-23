@@ -77,9 +77,9 @@ const Contact = () => {
                                 onChange={handleChange}
                             >
                                 <option value="">Select an option</option>
-                                <option value="123-main-st-windsor">123 Main St, Windsor</option>
-                                <option value="456-elm-st-windsor">456 Elm St, Windsor</option>
-                                <option value="789-oak-st-windsor">789 Oak St, Windsor</option>
+                                <option value="8475-wyandotte-st-e">8475 Wyandotte St E</option>
+                                <option value="150-park-st-w">150 Park St W</option>
+                                <option value="2650-vine-ct">2650 Vine Ct</option>
                                 <option value="general-inquiry">General Inquiry</option>
                             </select>
                         </div>
