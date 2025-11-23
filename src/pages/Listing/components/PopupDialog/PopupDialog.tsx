@@ -44,6 +44,7 @@ const PopupDialog: React.FC<PopupDialogProps> = ({ isOpen, onClose, listing }) =
             if (response.ok) {
                 setStatusMessage('Your question has been submitted successfully.');
                 setFormData({ name: '', email: '', message: '' });
+                onClose(); // <-- this will close the popup
             } else {
                 setStatusMessage('Failed to submit your question. Please try again.');
             }
