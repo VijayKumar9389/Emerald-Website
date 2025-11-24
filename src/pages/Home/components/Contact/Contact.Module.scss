@@ -108,26 +108,38 @@
           justify-content: flex-end;
 
           .btn {
-            background-color: $primary-color;
-            color: white;
-            padding: $spacing-sm $spacing-xl;
-            border-radius: $border-radius-md;
+            background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%)); /* Gradient background */
+            color: $text-white; /* White text for contrast */
+            border: none;
+            border-radius: $border-radius-lg; /* More pronounced rounding */
+            padding: $spacing-sm $spacing-md; /* Adjusted padding for balance */
+            font-size: 1rem;
             font-weight: $font-weight-medium;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: $spacing-sm;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba($primary-color, 0.3);
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: fit-content;
 
             .icon {
-              font-size: 1.2rem;
+              font-size: 1.5rem; /* Increased icon size */
+              color: $primary-color; /* Icon color matching button gradient */
+              background-color: $text-white; /* Icon background for contrast */
+              border-radius: 50%;
+              padding: $spacing-xs; /* Adjusted padding to maintain fit */
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
 
             &:hover {
-              background-color: darken($primary-color, 8%);
-              transform: translateY(-2px);
+              background: linear-gradient(135deg, darken($primary-color, 10%), darken($primary-color, 20%)); /* Darker gradient on hover */
+            }
+
+            &:active {
+              background: linear-gradient(135deg, darken($primary-color, 20%), darken($primary-color, 30%)); /* Even darker gradient on click */
             }
           }
         }

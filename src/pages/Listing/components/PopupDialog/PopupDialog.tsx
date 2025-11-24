@@ -108,9 +108,12 @@ const PopupDialog: React.FC<PopupDialogProps> = ({ isOpen, onClose, listing }) =
                         />
                     </label>
 
-                    <button type="submit" className="btn">
-                        Send Message <IoIosSend className="icon" />
-                    </button>
+                    <div className="form-footer">
+                        <button type="submit" className="btn">
+                            Send Message <IoIosSend className="icon" />
+                        </button>
+                    </div>
+
                     {statusMessage && <p className="status-message">{statusMessage}</p>}
                 </form>
             </div>

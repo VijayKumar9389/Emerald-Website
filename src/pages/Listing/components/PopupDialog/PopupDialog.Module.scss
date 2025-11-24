@@ -13,6 +13,11 @@
   backdrop-filter: blur(3px); // Optional blur for elegance
 }
 
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .popup-dialog {
   background: $card-background;
   border-radius: $border-radius-lg;
@@ -37,40 +42,40 @@
     margin-bottom: $spacing-lg;
 
     h2 {
-      font-size: 1.25rem;
-      font-weight: bold;
+      font-size: 1.5rem;
+      font-weight: normal;
       color: $text-primary;
       margin: 0;
     }
 
+
+
     .back-button {
-      background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+      background-color: #ccc; // light gray
       border: none;
       border-radius: 50%;
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $text-white;
+      color: #666; // icon color
       font-size: 1.25rem;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.2s ease;
 
       .icon {
         font-size: 1.2rem;
-        color: inherit;
       }
 
       &:hover {
-        background: linear-gradient(135deg, darken($primary-color, 5%), darken($primary-color, 20%));
-        transform: scale(1.05);
-        box-shadow: 0 4px 12px rgba($primary-color, 0.4);
+        background-color: #bbb; // slightly darker gray on hover
+        color: #333; // icon color
+
       }
 
       &:active {
-        transform: scale(0.95);
-        background: linear-gradient(135deg, darken($primary-color, 20%), darken($primary-color, 30%));
+        background-color: #aaa; // slightly darker when pressed
       }
     }
   }
@@ -80,8 +85,16 @@
     flex-direction: column;
     gap: $spacing-lg;
 
+    h5 {
+        font-size: 1rem;
+        font-weight: normal;
+        color: $text-secondary;
+        margin: 0 0 $spacing-sm 0;
+    }
+
     label {
-      font-size: 0.95rem;
+      font-weight: 600;
+      font-size: 1rem;
       color: $text-primary;
       display: flex;
       flex-direction: column;
