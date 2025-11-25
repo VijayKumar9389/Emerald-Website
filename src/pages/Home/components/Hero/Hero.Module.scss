@@ -11,9 +11,19 @@
   padding: 0 $spacing-xl; // more breathing room from the edges
 
   @media (max-width: $breakpoint-md) {
-    flex-direction: column; // stack text on top for mobile
-    padding: 0 $spacing-md;
-    height: 60vh;
+    .hero-wrapper {
+      flex-direction: column;
+      padding: 0 $spacing-md;
+      height: 60vh;
+      justify-content: center;   // <— add this!
+      align-items: center;       // <— ensures horizontal centering too
+    }
+
+    .hero-content {
+      margin: 0;                 // remove left offset
+      text-align: center;
+      max-width: 90%;            // optional: improve mobile layout
+    }
   }
 }
 

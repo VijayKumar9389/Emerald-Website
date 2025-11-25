@@ -20,7 +20,7 @@
 
 .popup-dialog {
   background: $card-background;
-  border-radius: $border-radius-lg;
+  border-radius: $border-radius-md;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25); // Material-like elevation
   max-width: 520px;
   width: 90%;
@@ -51,8 +51,8 @@
 
 
     .back-button {
-      background-color: #ccc; // light gray
-      border: none;
+      background-color: #fff; // light gray
+      border: 1px solid $border-color;
       border-radius: 50%;
       width: 40px;
       height: 40px;
@@ -69,9 +69,8 @@
       }
 
       &:hover {
-        background-color: #bbb; // slightly darker gray on hover
+        background-color: #f4f4f4; // slightly darker gray on hover
         color: #333; // icon color
-
       }
 
       &:active {
@@ -104,7 +103,7 @@
       select,
       textarea {
         padding: $spacing-md;
-        border-radius: $border-radius-md;
+        border-radius: $border-radius-sm;
         border: 1px solid $border-color;
         font-size: 1rem;
         background-color: $background-color;

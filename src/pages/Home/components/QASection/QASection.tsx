@@ -38,7 +38,7 @@ const QASection: React.FC = () => {
         },
         {
             question: "Are pets allowed?",
-            answer: "Some of our properties allow pets or assistance animals. Please check the listing details for each property before booking."
+            answer: "Sadly, none of our locations can accommodate those who have pets such as dogs or cats."
         },
         {
             question: "How close are the properties to attractions and conveniences?",

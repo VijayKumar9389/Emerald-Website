@@ -10,6 +10,9 @@
     padding: $spacing-md;
     display: flex;
     justify-content: flex-start;
+    max-width: $breakpoint-xxl;
+    margin: 0 auto;
+    width: 100%;
 
     .site-logo {
       height: 72px;
